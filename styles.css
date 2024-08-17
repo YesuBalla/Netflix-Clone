@@ -1,0 +1,659 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    background-color: black;
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+    z-index: 10;
+  }
+  
+  .navbar__brand {
+    width: 110px;
+    /* height: 100%; */
+    margin-top: 10px;
+  }
+  
+  .brand__logo {
+    width: 100%;
+    height: 100%;
+  }
+  /* .nav__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+  
+  .language__drop__down {
+    background: transparent;
+    border: none;
+    /* outline: none; */
+    /* padding: 0.5rem; */
+    /* padding-left: 0px; */
+    color: white;
+    /* font-weight: bold; */
+    /* font-size: 16px; */
+    /* cursor: pointer; */
+  }
+  
+  .language__drop__down:focus {
+    outline: none;
+  }
+  
+  .language__drop__down option {
+    background-color: rgb(247, 246, 246);
+    color: #000000;
+  }
+  
+  .dropdown__container {
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .signin__button {
+    background-color: #dc030f;
+    border: 1px solid #dc030f;
+    /* border: none; */
+    cursor: pointer;
+    outline: none;
+    color: white;
+    padding: 7px 14px;
+    font-size: 15px;
+    font-weight: 600;
+    /* font-size: 16px; */
+    border-radius: 4px;
+  }
+  
+  .navbar__nav__items {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .hero__bg__image__container {
+    width: 100%;
+    height: 80vh;
+  }
+  
+  .hero__bg__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero__bg__overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+  
+  .hero__card {
+    position: absolute;
+    top: 25%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .hero__title {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .hero__subtitle,
+  .hero__description {
+    font-weight: 400;
+    font-size: 1.2rem;
+    /* line-height: 1.2; */
+  }
+  
+  .hero__description {
+    margin: 0 50px;
+    font-size: 1rem;
+    font-weight: 200;
+    /* font-size: 0.8rem; */
+  }
+  
+  .email__input {
+    border: 1px solid gray;
+    background-color: #00000061;
+    /* width: 300px; */
+    /* height: 50px; */
+    width: 100%;
+    height: 100%;
+    padding-left: 7px;
+    color: rgb(250, 251, 252);
+    border-radius: 5px;
+  }
+  .email__label {
+    color: rgb(248, 245, 245);
+    position: absolute;
+    top: 28%;
+    left: 2%;
+    transition: 0.5s;
+    z-index: -1;
+    /* margin-left: 0.5rem; */
+    /* font-size: 15px; */
+  }
+  
+  .email__form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .form__container {
+    position: relative;
+    /* background-color: white; */
+    width: 90%;
+    height: 50px;
+  }
+  
+  .email__input:focus + .email__label {
+    top: 0.2rem;
+    font-size: 10px;
+  }
+  
+  /* .email__input:not(:placeholder-shown).email__input:not(:focus) + .email__label {
+    top: 0.2rem;
+    font-size: 10px;
+  } */
+  
+  .primary__button {
+    background-color: #dc030f;
+    border: 1px solid #dc030f;
+    /* border: none; */
+    color: white;
+    border-radius: 4px;
+    font-size: 25px;
+    /* font-weight: 600; */
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    height: 50px; 
+    width: 200px;
+        /* margin-top: 10px; */
+  }
+
+  
+  .feature {
+    border-top: 8px solid #222;
+    padding: 2rem 1rem;
+  }
+  
+  .feature__details {
+    text-align: center;
+  }
+  
+  .feature__title {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  
+  .feature__sub__title {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .feature__image__container {
+    width: 100%;
+    position: relative;
+  }
+  .feature__image {
+    width: 100%;
+  }
+  
+  .feature__backgroud__video__container {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 13%;
+    height: 100%;
+    max-width: 73%;
+    max-height: 54%;
+    z-index: -2;
+  }
+  
+  .feature__backgroud__video {
+    width: 100%;
+  }
+  
+  .feature__2__poster__container {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 16em;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    height: 60px;
+    padding: 0.25rem 0.6rem;
+    gap: 15px;
+  }
+  
+  .poster__container {
+    width: 20%;
+  }
+  
+  .poster {
+    width: 100%;
+    height: 100%;
+  }
+  .poster__details {
+    width: 60%;
+  }
+  .poster__details > h4 {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .poster__details > h6 {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(63, 63, 246);
+  }
+  
+  .download__gif__container {
+    width: 20%;
+    height: 100%;
+  }
+  .gif {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .feature__3__backgroud__video__container {
+    max-width: 63%;
+    max-height: 47%;
+    z-index: -2;
+    top: 9%;
+    left: 19%;
+  }
+  
+  .FAQ__accordian {
+    width: 100%;
+  }
+  .FAQ__title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-size: 18px;
+    background-color: #303030;
+    border: 1px solid #303030;
+    color: white;
+  }
+  
+  .FAQ__visible {
+    background-color: #303030;
+    border-top: 1px solid black;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  .FAQ__visible > p {
+    margin: 1rem;
+  }
+  .FAQ__list__container {
+    border-top: 8px solid #222;
+    padding: 2rem 0.7rem;
+  }
+  .FAQ__heading {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin: 1rem 3rem;
+  }
+  
+  .FAQ__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .FAQ__get__started__email {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .FAQ__get__started__email > h3 {
+    align-self: center;
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 75%;
+  }
+  
+  footer {
+    border-top: 8px solid #333;
+    padding: 2rem 1rem;
+    color: #bfbebe;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+  }
+  
+  .footer__row__2 {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    /* height: 240px; */
+    font-size: 14px;
+    line-height: 3;
+    /* text-align: left; */
+    justify-content: flex-start;
+    text-decoration: underline;
+  }
+  .column {
+    width: 50%;
+  }
+
+  .footer__row__1 > h4 {
+    font-size: 15px;
+    font-weight: 500;
+    /* text-decoration: none; */
+  }
+  
+  .footer__row__3 > .dropdown__container {
+    width: fit-content;
+    border: 1px solid #f6f4f4;
+    color: #f6f4f4;
+  }
+  
+  .footer__row__3 > .dropdown__container > .language__drop__down {
+    color: #f6f4f4;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .navbar {
+      padding: 2% 10%;
+    }
+    .navbar__brand {
+        width: 130px;
+        /* height: 100%; */
+      }
+      .signin__button {
+        padding: 8px 15px;
+      }
+    .hero__bg__image__container {
+      height: 110vh;
+    }
+  
+    .hero__bg__overlay {
+      height: 110vh;
+    }
+    .hero__card {
+      top: 55%;
+      left: 33%;
+      transform: translate(-25%, -25%);
+    }
+    .hero__title {
+      font-size: 2.4rem;
+      /* font-weight: bold; */
+    }
+    .hero__subtitle,
+    .hero__description {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    .hero__description {
+        font-size: 1.2rem;
+        font-weight: 200;
+    }
+    .email__form__container {
+        flex-direction: row;
+        /* justify-content: flex-start; */
+        /* align-items: center; */
+        gap: 15px;
+        margin-top: 25px;
+    }
+  
+    .feature {
+      padding: 4rem;
+    }
+  
+    .feature__title {
+      font-size: 35px;
+    }
+  
+    .feature__sub__title {
+      font-size: 20px;
+    }
+    .feature__2__poster__container {
+      max-width: 26em;
+      height: 85px;
+    }
+    .poster__container {
+      width: 15%;
+    }
+    .download__gif__container {
+      width: 3rem;
+      height: 3rem;
+    }
+    .poster__details > h4 {
+      font-size: 18px;
+    }
+    .poster__details > h6 {
+      font-size: 14px;
+    }
+    .FAQ__accordian {
+        width: 90%;
+    }
+    .FAQ__title {
+      font-size: 26px;
+      padding: 20px 20px;
+    }
+    .FAQ__heading {
+      font-size: 38px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    .FAQ__list {
+      padding: 1rem;
+    }
+    .FAQ__get__started__email {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transform: translateX(15%);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .navbar {
+      padding: 2% 10%;
+    }
+  
+    .navbar__brand {
+      width: 140px;
+    }
+  
+    .signin__button {
+      padding: 10px 20px;
+    }
+    .dropdown__container {
+      padding: 7px 14px;
+    }
+  
+    .navbar__nav__items {
+      gap: 15px;
+    }
+    .hero__bg__image__container {
+        height: 130vh;
+      }
+    
+    .hero__bg__overlay {
+        height: 130vh;
+    }
+    /* .hero__card {
+      top: 50%;
+      left: 50%; 
+      transform: translate(-50%, -50%);
+    } */
+    .hero__title {
+        font-size: 2.7rem;
+        /* font-weight: bold; */
+      }
+    .form__container {
+      width: 50%;
+    }
+    .email__form__container {
+      flex-direction: row;
+      /* justify-content: flex-start; */
+      /* align-items: center; */
+      /* width: 560px; */
+      gap: 15px;
+      /* margin-top: 10px; */
+    }
+  
+    .feature {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  
+    .feature__details {
+      text-align: left;
+      padding: 0 6rem;
+    }
+  
+    .feature__title {
+      font-size: 50px;
+    }
+  
+    .feature__sub__title {
+      font-size: 25px;
+    }
+  
+    .feature__image__container {
+      max-width: 500px;
+    }
+  
+    .feature:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  
+    .feature__2__poster__container {
+      max-width: 20em;
+      height: 100px;
+      padding: 1rem;
+    }
+    .poster__container {
+      width: 20%;
+    }
+    .FAQ__list {
+      padding: 2rem;
+    }
+    .FAQ__accordian {
+        width: 70%;
+    }
+    .FAQ__get__started__email {
+      transform: translateX(16%);
+    }
+    footer {
+      padding: 2rem 4rem;
+      justify-content: flex-start;
+      /* text-align: left; */
+      align-items: flex-start;
+    }
+    .FAQ__get__started__email > h3 {
+        margin-bottom: 0px;
+      }
+  
+    .footer__row__2 {
+        width: 100%;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+    }
+  
+    .footer__row__1,
+    .footer__row__3,
+    .footer__row__4 {
+      align-self: flex-start;
+    }
+  }
+  button:hover {
+    background-color: #c4030c
+}
+.FAQ__title:hover {
+    background-color: #65646498;
+}
+@media screen and (max-width: 512px) {
+    .language__drop__down {
+        width: 22px;
+    }
+    .dropdown__container {
+        padding: 2px 6px;
+    }
+    .signin__button {
+        padding: 5px 10px;
+      }
+      .hero__title {
+        font-size: 30px;
+      }
+      .primary__button {
+        font-size: 18px;
+        width: 150px;
+      }
+
+      .hero__subtitle,
+      .hero__description {
+        font-weight: 400;
+        font-size: 1.2rem;
+        /* line-height: 1.2; */
+      }
+      
+      .hero__description {
+        margin: 0 50px;
+        font-size: 1rem;
+        font-weight: 200;
+        /* font-size: 0.8rem; */
+      }
+    .footer__row__3 .language__drop__down {
+        width: 75px;
+        font-size: 16px;
+    }
+}
+.underline {
+    text-decoration: underline;
+}
